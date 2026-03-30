@@ -1,0 +1,43 @@
+# Explicação do Site - QWA Solutions
+
+Este site foi desenvolvido utilizando Next.js (App Router) e Tailwind CSS 4. O objetivo é fornecer uma landing page moderna, performática e fiel ao design fornecido.
+
+## Estrutura do Site
+
+O site é composto pelas seguintes seções:
+1. **Hero Section**: Apresentação principal com o slogan "Simplifique suas Ideias" e chamada para ação (CTA).
+2. **Stats Section**: Exibição de números de impacto (soluções entregues, anos de experiência, etc).
+3. **Evolução & Serviços**: Detalhamento dos serviços oferecidos (Team as Service, Fábrica de Software, Consultoria, Transformação Digital).
+4. **Ramos de Atuação**: Cards destacando os setores atendidos (Seguro, Financeiros, Vendas).
+5. **Processo (Como Trabalhamos)**: Linha do tempo visual do fluxo de trabalho da empresa.
+6. **Quem Somos Nós**: Missão, Visão e Valores.
+7. **Depoimentos (Mentorado)**: Seção focada na evolução de pessoas com depoimentos reais.
+8. **CTA Final**: Convite para contato via formulário ou WhatsApp.
+9. **Footer**: Rodapé completo com links úteis e informações de contato.
+
+## Tecnologias Utilizadas
+- **Next.js 15+**: Framework React para o frontend.
+- **Tailwind CSS 4**: Utilizado para estilização rápida e responsiva, com cores customizadas.
+- **Varela Round (Google Fonts)**: Fonte escolhida para substituir a "Futura Round", mantendo o aspecto arredondado e profissional.
+
+## Cores Customizadas (Tailwind)
+- `qwa-primary`: #7B4DFF (Roxo principal)
+- `qwa-dark`: #3B1E91 (Roxo escuro para gradientes e contrastes)
+- `qwa-light`: #F0E7FF (Roxo claro para backgrounds de seções e cards)
+- `qwa-cyan`: #00FFFF (Ciano para destaques e botões secundários)
+
+## Imagens Necessárias (Assets)
+As imagens abaixo foram deixadas com placeholders ou em branco conforme solicitado. Recomenda-se adicionar os seguintes arquivos na pasta `/public`:
+
+1. **Logo QWA**: Substituir o placeholder de texto no Header e Footer.
+2. **Hero Illustration**: Ilustração abstrata (redemoinho/linhas) para a seção principal.
+3. **Logos de Parceiros**: Logos da Porto, Evertec, Oliveira Trust e FARCA (em escala de cinza/transparente).
+4. **Ícones de Serviços**: Ícones para Team as Service, Fábrica de Software, etc.
+5. **Ícones de Atuação**: Ícones para Seguro (Escudo), Financeiros (Moeda/Cifrão) e Vendas (Carrinho).
+6. **Ícones de Processo**: 7 ícones para as etapas do "Como Trabalhamos".
+7. **Imagem do Mentorado**: Foto do mentor ou equipe para a seção "Focados na Evolução de Pessoas".
+
+## Como Executar
+1. Instale as dependências: `npm install`
+2. Inicie o servidor de desenvolvimento: `npm run dev`
+3. Acesse: `http://localhost:3000`
