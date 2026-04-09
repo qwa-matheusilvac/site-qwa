@@ -12,7 +12,7 @@
 }
 
 @theme {
-  --font-sans: var(--font-varela-round), system-ui, sans-serif;
+  --font-sans: var(--font-roboto), system-ui, sans-serif;
   --color-qwa-primary: var(--qwa-primary);
   --color-qwa-dark: var(--qwa-dark);
   --color-qwa-light: var(--qwa-light);

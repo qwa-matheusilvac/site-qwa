@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Varela_Round } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const varelaRound = Varela_Round({
-  weight: "400",
-  variable: "--font-varela-round",
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  variable: "--font-roboto",
   subsets: ["latin"],
 });
 
@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${varelaRound.variable} font-sans`}>
-      <body className="antialiased">{children}</body>
+    <html lang="pt-BR" className={roboto.variable}>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }
