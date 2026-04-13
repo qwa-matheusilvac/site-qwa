@@ -26,3 +26,25 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+.container-links{
+  height: 30px;
+  display: flex;
+  width: 100%;
+  gap: 100;
+}
+
+.link-group{
+  display: flex;
+  flex: 1 1 flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.espacamento{
+  margin-bottom: 25px;
+}
+
+.texto-mentoria{
+  font-size: 40px;
+}
