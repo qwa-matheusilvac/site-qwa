@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Coustard } from "next/font/google";
+import useEmblaCarousel from 'embla-carousel-react';
 
 const coustard = Coustard({
   weight: "900",

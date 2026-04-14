@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const Destaque = () => {
   return (
-    <section className="relative bg-gradient-to-b from-[#4d3ef7] to-[#9b66ff] text-white pt-10 pb-32 rounded-b-[80px] md:rounded-b-[150px] z-10">
+    <section className="relative bg-gradient-to-b from-[#4d3ef7] to-[#9b66ff] text-white pt-2 pb-20 rounded-b-[80px] md:rounded-b-[130px] z-10">
       <nav className="container mx-auto px-10 flex justify-between items-center">
-        <div className="flex items-center">
+        <div className="flex items-center pt-2">
           <Image 
             src="/CAPA/LogoQWA.png" 
             alt="QWA" 
-            width={100} 
+            width={80} 
             height={40} 
             className="brightness-0 invert"
             priority
@@ -22,14 +22,14 @@ const Destaque = () => {
         </div>
       </nav>
 
-      <div className="container mx-auto px-10 mt-20 flex flex-col md:flex-row items-center relative">
+      <div className="container mx-auto px-5 mt-10 flex flex-col md:flex-row items-center relative">
         <div className="md:w-1/2 z-10">
           <h1 className="text-6xl md:text-[100px] font-black leading-[0.9] tracking-tighter mb-6">
             SIMPLIFIQUE<br />
             SUAS <span className="text-[#46e9e9]">IDEIAS</span>
           </h1>
           <p className="text-lg md:text-xl font-light mb-10 opacity-90">
-            Tornamos ideias em Soluções reais
+            Há 13 anos transformando problemas em soluções reais. 
           </p>
           <button className="bg-[#46e9e9] text-[#4d3ef7] font-extrabold px-12 py-4 rounded-full hover:scale-105 transition-transform uppercase text-sm tracking-widest shadow-xl cursor-pointer">
             Quem Somos
