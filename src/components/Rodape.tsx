@@ -2,8 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { LuMapPinned } from "react-icons/lu";
 import { FaInstagram } from 'react-icons/fa';
-import { FaPhoneVolume } from 'react-icons/fa6';
-import { FaSquareFacebook } from 'react-icons/fa6';
+import { FaPhoneVolume, FaSquareFacebook } from 'react-icons/fa6';
 import { IoLogoLinkedin } from 'react-icons/io5';
 
 const Rodape = () => {

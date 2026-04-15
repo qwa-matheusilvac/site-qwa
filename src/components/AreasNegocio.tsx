@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from './AtuacaoCard';
 
 const AreasNegocio = () => {
   const areas = [
@@ -26,6 +27,7 @@ const AreasNegocio = () => {
         <h2 className="text-4xl font-black mb-16 uppercase text-center md:text-left tracking-tight">
           Ramos de <span className="text-qwa-primary">Atuação</span>
         </h2>
+      <Card />
         <div className="grid md:grid-cols-3 gap-10">
           {areas.map((card, i) => (
             <div 
