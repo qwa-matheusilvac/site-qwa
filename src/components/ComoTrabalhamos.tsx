@@ -2,9 +2,9 @@ import React from 'react';
 import { BsClipboard2Pulse } from 'react-icons/bs';
 import { SiDevbox } from 'react-icons/si';
 import { GrTest, GrValidate } from 'react-icons/gr';
-import { LuCloudUpload } from "react-icons/lu";
 import { FaMedal } from 'react-icons/fa';
 import { FaMagnifyingGlassChart } from 'react-icons/fa6';
+import { IoGitPullRequestOutline } from 'react-icons/io5';
 
 const ComoTrabalhamos = () => {
   const steps = [
@@ -13,7 +13,7 @@ const ComoTrabalhamos = () => {
     { title: "Desenvolvimento", icon: SiDevbox },
     { title: "Teste", icon: GrTest },
     { title: "Homologação", icon: GrValidate },
-    { title: "Implantação em produção", icon: LuCloudUpload },
+    { title: "Implantação em produção", icon: IoGitPullRequestOutline },
     { title: "Garantia", icon: FaMedal }
   ];
 

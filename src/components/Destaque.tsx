@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Tornado from "./LogoReativo";
 
 const Destaque = () => {
   return (
@@ -22,14 +23,14 @@ const Destaque = () => {
         </div>
       </nav>
 
-      <div className="container mx-auto px-5 mt-10 flex flex-col md:flex-row items-center relative">
+      <div className="container mx-auto px-5 mt-5 flex flex-col md:flex-row items-center relative">
         <div className="md:w-1/2 z-10">
           <h1 className="text-6xl md:text-[100px] font-black leading-[0.9] tracking-tighter mb-6">
             SIMPLIFIQUE<br />
             SUAS <span className="text-[#46e9e9]">IDEIAS</span>
           </h1>
           <p className="text-lg md:text-xl font-light mb-10 opacity-90">
-            Há 13 anos transformando problemas em soluções reais. 
+            Sua parceira em inovação, agilidade e satisfação.
           </p>
           <button className="bg-[#46e9e9] text-[#4d3ef7] font-extrabold px-12 py-4 rounded-full hover:scale-105 transition-transform uppercase text-sm tracking-widest shadow-xl cursor-pointer">
             Quem Somos
@@ -38,12 +39,7 @@ const Destaque = () => {
         
         <div className="md:w-1/2 relative mt-10 md:mt-0 flex justify-center">
           <div className="relative w-full max-w-xl">
-            <Image 
-              src="/CAPA/LogoQWABranca.png" 
-              alt="Vortex" 
-              width={800} 
-              height={800} 
-              className="w-full h-auto object-contain opacity-90"
+            <Tornado
             />
             {/* O retângulo com checkmark foi removido a pedido do usuário */}
           </div>

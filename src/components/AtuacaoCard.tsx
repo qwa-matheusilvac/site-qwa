@@ -23,7 +23,7 @@ const cardsData = [
 
 export default function Card() {
   return (
-    <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center px- opacity-90" style={{ marginBottom: '40px'}}>
+    <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center px-" style={{ marginBottom: '40px'}}>
       {cardsData.map((card, index) => {
         const Icon = card.icone;
 
@@ -32,7 +32,7 @@ export default function Card() {
             key={index}
             className="w-full max-w-[350px] h-[180px] p-6 rounded-[40px] 
             bg-gradient-to-b from-[#9b66ff] to-[#3B1E91] text-[#F0E7FF] 
-            opacity-90 relative transition-all duration-500 hover:translate-y-[-10px]"
+            relative transition-all duration-500 hover:translate-y-[-10px]"
           >
             <div className="flex flex-col h-full justify-between">
               
