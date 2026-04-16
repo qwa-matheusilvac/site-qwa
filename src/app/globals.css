@@ -38,5 +38,22 @@ body {
 }
 
 .texto-mentoria{
-  font-size: 40px;
+  font-size: 42px;
+    text-shadow: 
+        0px 0px 10px #F0E7FF,
+        0px 2px 5px #8d8d8d,
+        0px 4px 6px #c0c0c0,
+        0px 6px 7px #e4e4e4;
+}
+
+.texto-eco {
+    font-size: 42px;
+    text-shadow: 
+        0px 0px 10px #F0E7FF,
+        0px 4px 5px #8559ff,
+        0px 10px 6px #9872ff,
+        0px 16px 7px #a382ff,
+        0px 22px 9px #b69bff,
+        0px 28px 10px #dbceff,
+        0px 34px 11px #d6c7ff;
 }
