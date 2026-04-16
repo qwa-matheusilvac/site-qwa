@@ -10,25 +10,7 @@ const coustard = Coustard({
 });
 
 const Mentoria = () => {
-  const testimonials = [
-    {
-      name: "Alisson Honório",
-      text: "Grande oportunidade de aprendizado praticando e interagindo com projetos reais!"
-    },
-    {
-      name: "Matheus Correia",
-      text: "Grande oportunidade de aprendizado praticando e interagindo com projetos reais!"
-    },
-    {
-      name: "Gabriel Corrêa",
-      text: "Grande oportunidade de aprendizado praticando e interagindo com projetos reais!"
-    },
-    {
-      name: "Ana Luiza de Oliveira",
-      text: "Grata por cada oportunidade de aprendizado, o mentorado vem sendo um exemplo de crescimento diário! 💙 "
-    }
-  ];
-
+  
   return (
     <section className="py-32 bg-white">
       <div className="container mx-auto px-10 flex flex-col md:flex-row gap-20">
