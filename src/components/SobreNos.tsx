@@ -22,14 +22,14 @@ const SobreNos = () => {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-10">
-        <h2 className="text-4xl font-black mb-16 uppercase tracking-tight">
-          Quem Somos <span className="text-qwa-primary">Nós</span>
+        <h2 className="text-4xl md:text-5xl font-black mb-16 uppercase text-center md:text-left tracking-tight">
+          <span className="text-qwa-primary">Quem Somos</span> <span className="text-qwa-dark">Nós</span>
         </h2>
         <div className="grid md:grid-cols-3 gap-10">
           {cards.map((card, i) => (
             <div 
               key={i} 
-              className="bg-qwa-primary text-white p-12 rounded-tl-[60px] rounded-br-[60px] relative shadow-2xl transition-all duration-300 hover:scale-105"
+              className="bg-qwa-primary text-white p-12 rounded-3xl relative shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <div className="flex justify-between items-start mb-8">
                 <h4 className="font-black uppercase text-2xl tracking-wide">{card.title}</h4>
