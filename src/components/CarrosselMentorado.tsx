@@ -4,16 +4,12 @@ import { Carousel } from "react-responsive-carousel";
 
 const data = [
   {
-    name: "Alisson Honório",
-    text: "Primeiro Comentário",
-  },
-  {
-    name: "Matheus Correia",
-    text: "Segundo Comentário",
+    name: "Luciana Ferreira da Silva",
+    text: "O Mentorado ajudou a me aproximar dos colegas de equipe devido aos desafios constantes. Aprendi a trabalhar em equipe, retirar dúvidas, a fazer perguntas mais diretas e a conseguir pesquisar de forma assertiva também. Apesar de ter atuado de forma breve, o Mentorado foi importante no início da minha jornada na QWA e como desenvolvedora de software.",
   },
   {
     name: "Gabriel Corrêa",
-    text: "Terceiro Comentário",
+    text: "Uma experiência inigualável! O Mentorado é repleto de desafios que incentivam e facilitam o processo de aprendizagem. Além disso, possui diversas fontes de conhecimento que despertam o questionamento e instigam o raciocínio. Obrigado, QWA!",
   },
   {
     name: "Ana Luiza de Oliveira",
@@ -23,28 +19,30 @@ const data = [
 
 const TextCarousel = () => {
   return (
-    <div style={{ maxWidth: "600px", margin: "0 auto" }}>
+    <div style={{ width: "600px", margin: "0" }}>
       <Carousel
         autoPlay
-        interval={3000}
+        interval={5000}
         infiniteLoop
         showThumbs={false}
-        showStatus={false}
+        showStatus={true}
         showIndicators={true}
+        showArrows={false}
       >
         {data.map((item, i) => (
-          <div key={i} className="flex justify-center items-center p-4">
-            <div className="bg-qwa-primary text-white p-6 rounded-3xl relative transition-all duration-500 hover:scale-[1.02] w-full">
+          <div key={i} className="flex justify-start items-start p-4"style={{ padding: '2px' }}>
+            <div className="text-white p-6 rounded-2xl duration-700]"
+            style={{ width: '700px', height: '200px', color: '#171717', backgroundColor: '#7c4dff81' }}>
               
-              <h5 className="font-black uppercase text-lg mb-4 tracking-widest">
+              <h5 className="font-black uppercase text-lg mb-4">
                 {item.name}
               </h5>
 
-              <p className="text-lg italic opacity-90 leading-relaxed">
+              <p className="text-s opacity-90">
                 {item.text}
               </p>
 
-              <div className="absolute right-6 bottom-4 text-qwa-cyan opacity-50">
+              <div className="absolute right-12 bottom-18 text-qwa-cyan opacity-50">
                 <span
                   style={{ fontSize: "56px", fontFamily: "coustard" }}
                 >

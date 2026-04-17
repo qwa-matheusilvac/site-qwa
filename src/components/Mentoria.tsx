@@ -10,7 +10,7 @@ const coustard = Coustard({
 });
 
 const Mentoria = () => {
-  
+
   return (
     <section className="py-32 bg-white">
       <div className="container mx-auto px-10 flex flex-col md:flex-row gap-20">
@@ -38,8 +38,13 @@ const Mentoria = () => {
           </div>
         </div>
 
-        <div className="md:w-1/2 space-y-10 flex flex-col justify-center" style={{backgroundColor: 'purple'}}>
-          <TextCarousel />
+        <div style={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column',backgroundColor: '#F0E7FF', borderRadius: '10%'  }}>
+          <div className="" style={{ height: '100%', display: 'flex', alignItems: 'center' }}>
+            teste
+          </div>
+          <div className="" style={{ height: '100%', display: 'flex', alignItems: 'flex-end'  }}>
+            <TextCarousel />
+          </div>
         </div>
       </div>
     </section>
