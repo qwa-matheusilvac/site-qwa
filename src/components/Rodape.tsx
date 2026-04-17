@@ -9,16 +9,16 @@ const Rodape = () => {
           <div className="space-y-6">
             <h5 className="font-black uppercase text-lg tracking-widest">Links</h5>
             <ul className="text-sm space-y-4 font-medium">
-              <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Home</a></li>
-              <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Sobre nós</a></li>
-              <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Mentorado</a></li>
-              <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Projetos</a></li>
+              <li><a href="#home" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Home</a></li>
+              <li><a href="#sobre-nos" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Sobre nós</a></li>
+              <li><a href="#mentorado" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Mentorado</a></li>
+              <li><a href="#contato" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Contato</a></li>
             </ul>
           </div>
           <div className="space-y-6">
             <h5 className="font-black uppercase text-lg tracking-widest">Links</h5>
             <ul className="text-sm space-y-4 font-medium">
-              <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Contate-nos</a></li>
+              <li><a href="#contato" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Contate-nos</a></li>
               <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Trabalhe conosco</a></li>
               <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Treinamentos</a></li>
             </ul>

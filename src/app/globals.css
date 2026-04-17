@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+  /* Define o tamanho base da fonte para 12px (75% de 16px) */
+  /* Isso fará com que todos os elementos que usam rem/em encolham proporcionalmente */
+  font-size: 12px; 
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10px; /* Ajuste para mobile para não ficar pequeno demais */
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -34,4 +47,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Reduz o container máximo para manter a proporção compacta em 100% de zoom */
+.container {
+  max-width: 1200px !important;
+  margin-left: auto;
+  margin-right: auto;
 }

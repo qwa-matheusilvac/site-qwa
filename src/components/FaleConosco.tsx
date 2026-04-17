@@ -2,7 +2,7 @@ import React from 'react';
 
 const FaleConosco = () => {
   return (
-    <section className="py-24 bg-white">
+    <section id="contato" className="py-24 bg-white">
       <div className="container mx-auto px-10">
         <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-6">
           <div className="max-w-2xl">
