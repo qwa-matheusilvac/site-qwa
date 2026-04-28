@@ -47,10 +47,8 @@ const Destaque = () => {
                 <h3 className="text-4xl md:text-5xl font-black text-white tracking-tighter">
                   <Contagem end={stat.value} />
                 </h3>
-                <p className="text-[10px] font-bold text-white/70 uppercase tracking-widest mt-2 leading-tight">
-                  {stat.label.split(' ').map((word, idx) => (
-                    <span key={idx} className="block">{word}</span>
-                  ))}
+                <p className="text-[10px] font-bold text-white/70 uppercase mt-2 leading-tight">
+                  {<span className="block" style={{display: 'flex', width: '10px'}}>{stat.label}</span>}
                 </p>
               </div>
             ))}
