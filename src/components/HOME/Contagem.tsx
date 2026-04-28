@@ -25,10 +25,21 @@ const Contagem = ({ end, duration = 2000 }: ContagemProps) => {
   }, [numericEnd, duration]);
 
   return (
+
     <span>
-      {suffix.startsWith("+") ? "+" : ""}
-      {count}
-      {suffix.endsWith("+") ? "" : suffix}
+    {suffix.endsWith("%") ? (
+        <span>
+          {suffix.startsWith("")}
+          {count}
+          {suffix.endsWith("") ? "%" : ""}
+        </span>
+      ) : 
+      <span>
+          {suffix.startsWith("+") ? "" : "+ "}
+          {count}
+          {suffix.endsWith("mil") ? " Mil" : ""}
+        </span>
+    }
     </span>
   );
 };

@@ -3,9 +3,9 @@ import Contagem from "./Contagem";
 
 const Destaque = () => {
   const statsData = [
-    { value: "+13", label: "Anos de Experiência" },
-    { value: "+200", label: "Soluções Entregues" },
-    { value: "50mil", label: "Horas de Projetos" },
+    { value: "13", label: "Anos de Experiência" },
+    { value: "200", label: "Soluções Entregues" },
+    { value: "50 mil", label: "Horas de Projetos" },
     { value: "100%", label: "Qualidade Garantida" }
   ];
 
