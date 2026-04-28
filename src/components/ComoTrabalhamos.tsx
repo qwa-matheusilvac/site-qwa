@@ -30,7 +30,7 @@ const ComoTrabalhamos = () => {
       if (i >= steps.length) {
         clearInterval(interval);
       }
-    }, 350); 
+    }, 350);
 
     return () => clearInterval(interval);
   }, []);
@@ -54,9 +54,8 @@ const ComoTrabalhamos = () => {
           <span className="text-qwa-primary">Como</span> Trabalhamos
         </h2>
 
-        <div className="lg:hidden relative flex flex-col gap-16">
-          <div className="absolute left-10 top-0 bottom-0 w-[4px] bg-gradient-to-b from-[#4A5DFF] to-[#7B4DFF] opacity-20 z-0" />
-
+        {/* MOBILE */}
+        <div className="lg:hidden flex flex-col items-center gap-16">
           {steps.map((step, i, arr) => {
             const Icon = step.icon as React.ElementType;
             const factor = i / (arr.length - 1);
@@ -66,11 +65,14 @@ const ComoTrabalhamos = () => {
             return (
               <div
                 key={i}
-                className="flex items-center gap-6 relative z-10"
+                className="flex flex-col items-center text-center"
               >
                 <div
-                  className="relative w-20 h-20 rounded-full flex items-center justify-center bg-white z-10"
-                  style={{ border: `4px solid ${isActive ? color : '#ccc'}` }}
+                  className="relative w-20 h-20 rounded-full flex items-center justify-center bg-white"
+                  style={{
+                    border: `4px solid ${isActive ? color : '#ccc'}`,
+                    boxShadow: isActive ? `0 0 20px ${color}55` : ''
+                  }}
                 >
                   <div
                     className="absolute inset-0 rounded-full transition-all duration-300"
@@ -80,10 +82,13 @@ const ComoTrabalhamos = () => {
                     }}
                   />
 
-                  <Icon className="text-3xl relative z-10" style={{ color: isActive ? '#fff' : color }} />
+                  <Icon
+                    className="text-3xl relative z-10"
+                    style={{ color: isActive ? '#fff' : color }}
+                  />
                 </div>
 
-                <p className="text-sm font-black uppercase text-gray-700">
+                <p className="text-sm font-black uppercase text-gray-700 mt-4">
                   {step.title}
                 </p>
               </div>
@@ -91,17 +96,16 @@ const ComoTrabalhamos = () => {
           })}
         </div>
 
+        {/* DESKTOP */}
         <div className="hidden lg:block relative">
 
-          {/* linha base */}
-
           <div
-            className="absolute top-10 h-[4px] z-0 duration-3000"
+            className="absolute top-10 h-[4px] z-0 duration-300"
             style={{
               left: '30px',
               width:
-                activeIndex !!= null
-                  ? `calc(${(7 / (steps.length - 1)) * 85}% - 60px)`
+                activeIndex !== null
+                  ? `calc(${(activeIndex / (steps.length - 1)) * 100}% - 60px)`
                   : '0%',
               background: 'linear-gradient(to right, #4A5DFF, #3B1E91)'
             }}
@@ -134,7 +138,10 @@ const ComoTrabalhamos = () => {
                       }}
                     />
 
-                    <Icon className="text-3xl relative z-10" style={{ color: isActive ? '#fff' : color }} />
+                    <Icon
+                      className="text-3xl relative z-10"
+                      style={{ color: isActive ? '#fff' : color }}
+                    />
                   </div>
 
                   <p className="text-[12px] font-black mt-6 uppercase text-gray-700 text-center">
