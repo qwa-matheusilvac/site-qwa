@@ -9,9 +9,9 @@ const Estatisticas = () => {
   ];
 
   return (
-    <section className="bg-white pt-24 pb-12 relative z-0 border-b border-gray-50">
+    <section className="bg-white pt-12 md:pt-24 md:pb-24 relative z-0 border-b border-gray-50">
       <div className="container mx-auto px-6">
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-30 grayscale hover:opacity-100 transition-opacity duration-500">
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-48 opacity-30 grayscale hover:opacity-100 transition-opacity duration-500">
           {logos.map((logo, index) => (
             <Image 
               key={index}
@@ -19,7 +19,7 @@ const Estatisticas = () => {
               alt={logo.alt} 
               width={logo.width} 
               height={logo.height} 
-              className="object-contain" 
+              className="object-contain w-1/8" 
             />
           ))}
         </div>
