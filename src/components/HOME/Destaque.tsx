@@ -12,7 +12,7 @@ const Destaque = () => {
   return (
     <section
       id="home"
-      className="relative bg-gradient-to-br from-qwa-lilac to-[#4d3ef7] text-white pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden rounded-b-[40px] md:rounded-b-[60px]"
+      className="relative bg-gradient-to-br from-qwa-lilac to-[#4d3ef7] text-white pt-24 md:pt-50 pb-16 md:pb-30 overflow-hidden rounded-b-[40px] md:rounded-b-[60px]"
     >
       <div className="container mx-auto px-6 md:px-10">
 
