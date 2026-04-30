@@ -1,22 +1,15 @@
 import React from 'react';
 
-const FaleConosco = () => {
+const faleconosco = () => {
   return (
     <section id="contato" className="py-24 bg-white">
       <div className="container mx-auto px-10">
         <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-black text-qwa-dark tracking-tight leading-tight">
-              Fale
-              <span className="text-qwa-primary"> Conosco</span>
-            </h2>
-          </div>
         </div>
 
-        <div className="bg-white rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.04)] overflow-hidden border border-gray-100">
+        <div className="bg-white rounded-[40px] shadow-xl overflow-hidden border border-gray-100">
           <div className="flex flex-col lg:flex-row">
-            {/* Left Content */}
-            <div className="lg:w-1/2 p-12 lg:p-20 bg-qwa-lilac text-white">
+            <div className="lg:w-1/2 p-12 lg:p-20 bg-gradient-to-br from-qwa-lilac to-qwa-dark text-white">
               <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-8">
                 Vamos transformar seu projeto em realidade?
               </h2>
@@ -33,7 +26,7 @@ const FaleConosco = () => {
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest mb-1">E-mail</p>
-                    <p className="text-white font-black">contato@qwa.com.br</p>
+                    <p className="text-white">contato@qwasolucoes.com.br</p>
                   </div>
                 </div>
 
@@ -45,13 +38,12 @@ const FaleConosco = () => {
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest mb-1">Telefone</p>
-                    <p className="text-white font-black">+55 11 99999-9999</p>
+                    <p className="text-white">+55 (11) 3014-2803</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right Content - Form */}
             <div className="lg:w-1/2 bg-white p-12 lg:p-20">
               <h3 className="text-2xl font-black text-qwa-dark uppercase tracking-tight mb-8">Fale conosco</h3>
               <form className="space-y-6">
@@ -88,7 +80,7 @@ const FaleConosco = () => {
                     className="w-full px-6 py-4 rounded-2xl border border-gray-100 focus:border-qwa-lilac focus:ring-0 transition-all outline-none bg-white font-medium resize-none"
                   ></textarea>
                 </div>
-                <button className="w-full bg-qwa-lilac text-white px-10 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] hover:bg-qwa-dark transition-all shadow-xl flex items-center justify-center gap-4 group">
+                <button className="w-full bg-qwa-dark text-white px-10 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] hover:bg-qwa-dark transition-all shadow-xl flex items-center justify-center gap-4 group">
                   Iniciar Transformação Digital
                   <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition-transform">
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,4 +97,4 @@ const FaleConosco = () => {
   );
 };
 
-export default FaleConosco;
+export default faleconosco;

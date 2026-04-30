@@ -12,7 +12,7 @@ const Destaque = () => {
   return (
     <section
       id="home"
-      className="relative bg-gradient-to-br from-qwa-lilac to-[#4d3ef7] text-white pt-24 md:pt-50 pb-16 md:pb-30 overflow-hidden rounded-b-[40px] md:rounded-b-[60px]"
+      className="relative bg-gradient-to-br from-qwa-lilac to-[#4d3ef7] text-white pt-24 md:pt-50 pb-16 md:pb-18 overflow-hidden rounded-b-[40px] md:rounded-b-[60px]"
     >
       <div className="container mx-auto px-6 md:px-10">
 
@@ -40,7 +40,7 @@ const Destaque = () => {
             h-auto
             object-contain
             opacity-20
-            md:opacity-60
+            md:opacity-80
             absolute
           "
               priority
@@ -49,7 +49,7 @@ const Destaque = () => {
         </div>
 
         <div className="mt-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-30 md:mt-24">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-30 md:mt-40">
 
             {statsData.map((stat, i) => (
               <div
