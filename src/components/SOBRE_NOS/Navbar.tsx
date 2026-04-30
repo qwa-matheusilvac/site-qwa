@@ -34,7 +34,7 @@ const Navbar = () => {
       <nav
         className={`
           fixed top-0 left-0 w-full z-[100]
-          py-4 bg-qwa-dark shadow-lg
+          py-4 backdrop-blur-md
           transition-transform duration-300
           ${showNavbar ? 'translate-y-0' : '-translate-y-full'}
         `}
@@ -100,7 +100,6 @@ const Navbar = () => {
           <Link href="/mentorado" onClick={() => setMenuOpen(false)} className="hover:text-qwa-lilac">Mentorado</Link>
           <Link href="/contato" onClick={() => setMenuOpen(false)} className="hover:text-qwa-lilac">Contato</Link>
         </div>
-
       </div>
     </>
   );

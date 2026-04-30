@@ -1,46 +1,34 @@
+import Image from 'next/image';
 import React from 'react';
 
 const SobreNos = () => {
-  const cards = [
-    { 
-      title: "Nossa Missão", 
-      desc: "Soluções sob medida que simplifiquem processos e impulsionem negócios.", 
-      icon: "🎯" 
-    },
-    { 
-      title: "Nossa Visão", 
-      desc: "Reconhecida pela excelência técnica, agilidade e inovação contínua.", 
-      icon: "💡" 
-    },
-    { 
-      title: "Nossos Valores", 
-      desc: "Simplicidade, Transparência, Excelência e Parceria.", 
-      icon: "🤝" 
-    }
-  ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-10">
-        <h2 className="text-4xl md:text-5xl font-black mb-16 uppercase text-center md:text-left tracking-tight">
-          <span className="text-qwa-primary">Quem Somos</span> <span className="text-qwa-dark">Nós</span>
+    <section className="py-24 bg-gradient-to-b from-qwa-dark to-qwa-lilac">
+      <div className="container mx-auto px-10 mt-12  ">
+        <h2 className="text-5xl md:text-6xl pb-8 text-center md:text-left tracking-tight  w-[50%]" style={{ lineHeight: 1.25 }}>
+          <span className="text-qwa-light font-black">Sua parceira em qualidade, agilidade e</span> <span className="text-qwa-cyan opacity-85"> inovação.</span>
         </h2>
-        <div className="grid md:grid-cols-3 gap-10">
-          {cards.map((card, i) => (
-            <div 
-              key={i} 
-              className="bg-qwa-primary text-white p-12 rounded-3xl relative shadow-2xl transition-all duration-300 hover:scale-105"
-            >
-              <div className="flex justify-between items-start mb-8">
-                <h4 className="font-black uppercase text-2xl tracking-wide">{card.title}</h4>
-                <div className="text-4xl drop-shadow-lg">{card.icon}</div>
-              </div>
-              <p className="text-lg opacity-90 leading-relaxed font-medium">
-                {card.desc}
-              </p>
-            </div>
-          ))}
+        <p className="text-gray-300  w-[50%] text-1xl" style={{ lineHeight: 1.75 }}>
+          Na QWA (Quality With Agility), nosso time é especializado em transcender o comum para entregar excelência tecnológica.
+          Catalisamos complexidade para transformá-la em simplicidade.
+        </p>
+      </div>
+      <div className="md:w-2/2 relative mt-16 md:mt-0 flex px-10 mt-12 py-24">
+        <h1 className="text-2xl md:text-3xl mb-16 md:text-left tracking-tight font-black text-qwa-dark">Nossa Trajetória</h1>
+        <div className="relative max-w-2xl">
+          <div className="relative z-10 overflow-hidden">
+            <Image
+              src="/CAPA/LogoQWABranca.png"
+              alt="QWA Solutions"
+              width={800}
+              height={800}
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </div>
+      </div>
+      <div>
       </div>
     </section>
   );

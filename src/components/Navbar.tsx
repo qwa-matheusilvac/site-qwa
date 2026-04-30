@@ -52,7 +52,7 @@ const Navbar = () => {
           {/* MENU DESKTOP (inalterado) */}
           <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 transition-all duration-300 px-8 py-3 rounded-full gap-8 text-xs font-black uppercase tracking-[0.15em] border bg-white/10 backdrop-blur-md border-white/20 text-white">
             <Link href="/" className="hover:text-qwa-cyan transition-colors">Home</Link>
-            <Link href="/#sobre-nos" className="hover:text-qwa-cyan transition-colors">Sobre Nós</Link>
+            <Link href="sobrenos" className="hover:text-qwa-cyan transition-colors">Sobre Nós</Link>
             <Link href="/mentorado" className="hover:text-qwa-cyan transition-colors">Mentorado</Link>
             <Link href="contato" className="hover:text-qwa-cyan transition-colors">Contato</Link>
           </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
         {/* LINKS */}
         <div className="flex flex-col px-6 py-6 gap-6 text-sm font-bold uppercase tracking-wider text-white">
           <Link href="/" onClick={() => setMenuOpen(false)} className="hover:text-qwa-lilac">Home</Link>
-          <Link href="/#sobre-nos" onClick={() => setMenuOpen(false)} className="hover:text-qwa-lilac">Sobre Nós</Link>
+          <Link href="/sobrenos" onClick={() => setMenuOpen(false)} className="hover:text-qwa-lilac">Sobre Nós</Link>
           <Link href="/mentorado" onClick={() => setMenuOpen(false)} className="hover:text-qwa-lilac">Mentorado</Link>
           <Link href="/contato" onClick={() => setMenuOpen(false)} className="hover:text-qwa-lilac">Contato</Link>
         </div>
