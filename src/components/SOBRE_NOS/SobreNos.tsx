@@ -38,19 +38,17 @@ const SobreNos = () => {
   return (
     <section className="relative py-24 bg-gradient-to-b from-qwa-dark via-qwa-blue to[##ffffff00] overflow-hidden">
 
-      <div className="absolute right-0 top-0 h-full w-1/2 opacity-10 md:hidden pointer-events-none">
         <Image
           src="/CAPA/LogoQWABranca.png"
           alt="QWA Background"
           fill
-          className="object-contain object-right"
+          className="object-cover opacity-3"
         />
-      </div>
 
       <div className="relative container mx-auto px-6 md:px-10 mt-28">
         <div className="flex flex-col md:flex-row items-start justify-between gap-10">
 
-          <div className="md:w-1/2">
+          <div className="md:w-[80%]">
             <h2 className="text-4xl md:text-6xl pb-6 tracking-tight leading-tight">
               <span className="text-qwa-light font-black">
                 Sua parceira em qualidade, agilidade e
@@ -60,7 +58,7 @@ const SobreNos = () => {
               </span>
             </h2>
 
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+            <p className="text-gray-300 text-lg md:text-xl leading-relaxed md:w-[80%] mt-12">
               Na QWA, combinamos expertise técnica com visão estratégica para desenvolver
               soluções digitais escaláveis, seguras e orientadas a resultados. Atuamos lado
               a lado com nossos clientes para transformar desafios complexos em produtos
@@ -68,26 +66,15 @@ const SobreNos = () => {
             </p>
 
             <Link href="/contato">
-              <button className="mt-8 bg-qwa-cyan opacity-75 text-qwa-dark font-bold px-6 py-3 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
+              <button className="mt-18 bg-qwa-cyan opacity-75 text-qwa-dark font-bold px-6 py-3 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
                 CONVERSE CONOSCO
               </button>
             </Link>
           </div>
-
-          <div className="md:w-1/2 hidden md:flex justify-end">
-            <Image
-              src="/CAPA/LogoQWABranca.png"
-              alt="QWA Solutions"
-              width={360}
-              height={360}
-              className="opacity-90 hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-
         </div>
       </div>
 
-      <div className="relative container mx-auto px-6 md:px-10 mt-40">
+      <div className="relative container mx-auto px-6 md:px-10 mt-50">
         <h3 className="text-3xl md:text-4xl font-black uppercase text-qwa-light mb-30">
           Pilares da QWA
         </h3>
@@ -98,7 +85,7 @@ const SobreNos = () => {
             return (
               <div
                 key={index}
-                className="bg-black/10 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:scale-[1.03] transition-all duration-300 shadow-lg"
+                className="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:scale-[1.03] transition-all duration-300 shadow-lg"
               >
                 <div className="flex items-center mb-4">
                   <Icon className="text-qwa-light text-3xl mr-4" />
