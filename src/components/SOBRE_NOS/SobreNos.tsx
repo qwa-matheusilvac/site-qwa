@@ -115,7 +115,7 @@ const SobreNos = () => {
         </div>
       </div>
 
-      <div className="relative container mx-auto px-6 md:px-10 mt-44 bg-white/3 backdrop-blur-lg pt-20 pb-40 rounded-[20px]">
+      <div className="relative container mx-auto px-6 md:px-10 mt-44 pt-20 pb-40 rounded-[20px]">
         <h3 className="text-3xl md:text-4xl font-black text-qwa-light uppercase mb-30 text-center">
           Nossa trajetória
         </h3>
@@ -157,12 +157,12 @@ const SobreNos = () => {
           <div className="md:hidden flex flex-col gap-8 mt-10">
             {timelineData.map((item, index) => (
               <div key={index} className="flex items-start gap-4">
-                <div className="min-w-[50px] h-[50px] flex items-center justify-center rounded-full bg-white/10 backdrop-blur-lg border border-white/10">
-                  <span className="font-black text-qwa-dark">{item.year}</span>
+                <div className="min-w-[50px] h-[50px] flex items-center justify-center rounded-full bg-qwa-dark/70 backdrop-blur-lg border border-white/10">
+                  <span className="font-black text-qwa-light leading-relaxed">{item.year}</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-qwa-dark">{item.title}</h4>
-                  <p className="text-sm opacity-70">{item.description}</p>
+                  <h4 className="font-bold text-qwa-light uppercase leading-relaxed">{item.title}</h4>
+                  <p className="text-sm leading-relaxed font-black text-qwa-dark">{item.description}</p>
                 </div>
               </div>
             ))}
