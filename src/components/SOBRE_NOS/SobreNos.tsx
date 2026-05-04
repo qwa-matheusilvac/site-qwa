@@ -1,35 +1,190 @@
+"use client";
+
 import Image from 'next/image';
 import React from 'react';
+import Link from 'next/link';
+import { LuHandHeart } from 'react-icons/lu';
+import { MdOutlineRocketLaunch } from 'react-icons/md';
+import { PiTarget } from 'react-icons/pi';
+
+const mvvData = [
+  {
+    title: "Missão",
+    description: "Entregar soluções tecnológicas de alta performance que impulsionam resultados reais para nossos clientes.",
+    icon: MdOutlineRocketLaunch
+  },
+  {
+    title: "Visão",
+    description: "Ser referência em inovação e qualidade no desenvolvimento de soluções digitais na América Latina.",
+    icon: PiTarget
+  },
+  {
+    title: "Valores",
+    description: "Excelência, transparência, agilidade, foco no cliente e inovação contínua em tudo o que fazemos.",
+    icon: LuHandHeart
+  }
+];
+
+const timelineData = [
+  { year: 2013, title: "Fundação", description: "Início da QWA." },
+  { year: 2014, title: "Primeiros projetos", description: "Entrega dos primeiros sistemas." },
+  { year: 2015, title: "Crescimento", description: "Expansão da base de clientes." },
+  { year: 2016, title: "Estruturação", description: "Organização interna e processos." },
+  { year: 2017, title: "Escala", description: "Aumento de demanda e equipe." },
+  { year: 2018, title: "Inovação", description: "Novas tecnologias adotadas." },
+];
 
 const SobreNos = () => {
-
   return (
-    <section className="py-24 bg-gradient-to-b from-qwa-dark to-qwa-lilac">
-      <div className="container mx-auto px-10 mt-12  ">
-        <h2 className="text-5xl md:text-6xl pb-8 text-center md:text-left tracking-tight  w-[50%]" style={{ lineHeight: 1.25 }}>
-          <span className="text-qwa-light font-black">Sua parceira em qualidade, agilidade e</span> <span className="text-qwa-cyan opacity-85"> inovação.</span>
-        </h2>
-        <p className="text-gray-300  w-[50%] text-1xl" style={{ lineHeight: 1.75 }}>
-          Na QWA (Quality With Agility), nosso time é especializado em transcender o comum para entregar excelência tecnológica.
-          Catalisamos complexidade para transformá-la em simplicidade.
-        </p>
+    <section className="relative py-24 bg-gradient-to-b from-qwa-dark via-qwa-blue to[##ffffff00] overflow-hidden">
+
+      <div className="absolute right-0 top-0 h-full w-1/2 opacity-10 md:hidden pointer-events-none">
+        <Image
+          src="/CAPA/LogoQWABranca.png"
+          alt="QWA Background"
+          fill
+          className="object-contain object-right"
+        />
       </div>
-      <div className="md:w-2/2 relative mt-16 md:mt-0 flex px-10 mt-12 py-24">
-        <h1 className="text-2xl md:text-3xl mb-16 md:text-left tracking-tight font-black text-qwa-dark">Nossa Trajetória</h1>
-        <div className="relative max-w-2xl">
-          <div className="relative z-10 overflow-hidden">
+
+      <div className="relative container mx-auto px-6 md:px-10 mt-28">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-10">
+
+          <div className="md:w-1/2">
+            <h2 className="text-4xl md:text-6xl pb-6 tracking-tight leading-tight">
+              <span className="text-qwa-light font-black">
+                Sua parceira em qualidade, agilidade e
+              </span>{" "}
+              <span className="text-qwa-cyan opacity-90">
+                inovação.
+              </span>
+            </h2>
+
+            <p className="text-gray-300 text-lg md:text-xl leading-relaxed">
+              Na QWA, combinamos expertise técnica com visão estratégica para desenvolver
+              soluções digitais escaláveis, seguras e orientadas a resultados. Atuamos lado
+              a lado com nossos clientes para transformar desafios complexos em produtos
+              eficientes, de maneira simplificada.
+            </p>
+
+            <Link href="/contato">
+              <button className="mt-8 bg-qwa-cyan opacity-75 text-qwa-dark font-bold px-6 py-3 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
+                CONVERSE CONOSCO
+              </button>
+            </Link>
+          </div>
+
+          <div className="md:w-1/2 hidden md:flex justify-end">
             <Image
               src="/CAPA/LogoQWABranca.png"
               alt="QWA Solutions"
-              width={800}
-              height={800}
-              className="w-full h-auto object-contain"
+              width={360}
+              height={360}
+              className="opacity-90 hover:scale-105 transition-transform duration-300"
             />
           </div>
+
         </div>
       </div>
-      <div>
+
+      <div className="relative container mx-auto px-6 md:px-10 mt-40">
+        <h3 className="text-3xl md:text-4xl font-black uppercase text-qwa-light mb-30">
+          Pilares da QWA
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {mvvData.map((item, index) => {
+            const Icon = item.icon as React.ElementType;
+            return (
+              <div
+                key={index}
+                className="bg-black/10 backdrop-blur-lg border border-white/10 rounded-2xl p-6 hover:scale-[1.03] transition-all duration-300 shadow-lg"
+              >
+                <div className="flex items-center mb-4">
+                  <Icon className="text-qwa-light text-3xl mr-4" />
+                  <h4 className="text-xl font-bold text-qwa-light">
+                    {item.title}
+                  </h4>
+                </div>
+                <p className="text-qwa-light leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            )
+          })}
+        </div>
       </div>
+
+      <div className="relative container mx-auto px-6 md:px-10 mt-44 bg-white/3 backdrop-blur-lg pt-20 pb-40 rounded-[20px]">
+        <h3 className="text-3xl md:text-4xl font-black text-qwa-light uppercase mb-30 text-center">
+          Nossa trajetória
+        </h3>
+
+        <div className="relative">
+
+          <div className="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-qwa-dark/40 to-transparent" />
+
+          <div className="hidden md:flex justify-between items-center gap-4">
+            {timelineData.map((item, index) => {
+              const isTop = index % 2 === 0;
+
+              return (
+                <div key={index} className="flex flex-col items-center flex-1 hover:scale-110 transition-all">
+
+                  {isTop && (
+                    <div className="mb-20 text-center max-w-[180px]">
+                      <h4 className="font-bold text-qwa-light uppercase leading-relaxed">{item.title}</h4>
+                      <p className="text-sm leading-relaxed font-black text-qwa-dark">{item.description}</p>
+                    </div>
+                  )}
+
+                  <div className="w-14 h-14 flex items-center justify-center rounded-full bg-qwa-dark/70 backdrop-blur-lg border border-white/10 shadow-lg">
+                    <span className="font-black text-qwa-light leading-relaxed">{item.year}</span>
+                  </div>
+
+                  {!isTop && (
+                    <div className="mt-20 text-center max-w-[180px]">
+                      <h4 className="font-bold text-qwa-light uppercase leading-relaxed">{item.title}</h4>
+                      <p className="text-sm leading-relaxed font-black text-qwa-dark">{item.description}</p>
+                    </div>
+                  )}
+
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="md:hidden flex flex-col gap-8 mt-10">
+            {timelineData.map((item, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <div className="min-w-[50px] h-[50px] flex items-center justify-center rounded-full bg-white/10 backdrop-blur-lg border border-white/10">
+                  <span className="font-black text-qwa-dark">{item.year}</span>
+                </div>
+                <div>
+                  <h4 className="font-bold text-qwa-dark">{item.title}</h4>
+                  <p className="text-sm opacity-70">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
+
+      <div className="relative container mx-auto px-6 md:px-10 mt-44 pb-10 text-qwa-dark">
+        <h3 className="text-3xl font-black italic md:text-4xl mb-12">
+          &lt; Quality With Agility /&gt;
+        </h3>
+
+        <p className="text-lg md:text-xl leading-relaxed">
+          A QWA carrega em sua essência o equilíbrio entre qualidade e agilidade — dois pilares que sustentam tudo o que construímos.
+          Nossa atuação é guiada pela criação de ecossistemas digitais robustos, pensados não apenas para atender demandas atuais,
+          mas para sustentar evolução contínua e vantagem competitiva.
+          Acreditamos no desenvolvimento humano como força central. Por isso, mais do que entregar soluções, estruturamos fundamentos
+          que impulsionam o crescimento de clientes e colaboradores de forma consistente e duradoura.
+        </p>
+      </div>
+
     </section>
   );
 };
