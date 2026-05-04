@@ -3,9 +3,10 @@
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
-import { LuHandHeart } from 'react-icons/lu';
+import { LuHandHeart, LuTornado } from 'react-icons/lu';
 import { MdOutlineRocketLaunch } from 'react-icons/md';
-import { PiTarget } from 'react-icons/pi';
+import { PiChatTeardropText, PiTarget } from 'react-icons/pi';
+import { TbHandFingerRight } from 'react-icons/tb';
 
 const mvvData = [
   {
@@ -38,12 +39,12 @@ const SobreNos = () => {
   return (
     <section className="relative py-24 bg-gradient-to-b from-qwa-dark via-qwa-blue to[##ffffff00] overflow-hidden">
 
-        <Image
-          src="/CAPA/LogoQWABranca.png"
-          alt="QWA Background"
-          fill
-          className="object-cover opacity-3"
-        />
+      <Image
+        src="/CAPA/LogoQWABranca.png"
+        alt="QWA Background"
+        fill
+        className="object-cover opacity-3"
+      />
 
       <div className="relative container mx-auto px-6 md:px-10 mt-28">
         <div className="flex flex-col md:flex-row items-start justify-between gap-10">
@@ -58,7 +59,7 @@ const SobreNos = () => {
               </span>
             </h2>
 
-            <p className="text-gray-300 text-lg md:text-xl leading-relaxed md:w-[80%] mt-12">
+            <p className="text-gray-300 text-lg md:text-xl leading-relaxed md:w-[80%] mt-12 text-justify">
               Na QWA, combinamos expertise técnica com visão estratégica para desenvolver
               soluções digitais escaláveis, seguras e orientadas a resultados. Atuamos lado
               a lado com nossos clientes para transformar desafios complexos em produtos
@@ -66,8 +67,10 @@ const SobreNos = () => {
             </p>
 
             <Link href="/contato">
-              <button className="mt-18 bg-qwa-cyan opacity-75 text-qwa-dark font-bold px-6 py-3 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
-                CONVERSE CONOSCO
+              <button className="mt-18 bg-qwa-cyan opacity-75 text-qwa-dark font-bold px-6 py-3 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg"
+                style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '4px' }}
+              >CONVERSE CONOSCO
+                <PiChatTeardropText className='w-6 h-6'/>
               </button>
             </Link>
           </div>
@@ -159,18 +162,61 @@ const SobreNos = () => {
       </div>
 
       <div className="relative container mx-auto px-6 md:px-10 mt-44 pb-10 text-qwa-dark">
-        <h3 className="text-3xl font-black italic md:text-4xl mb-12">
+        <h3 className="text-3xl font-black md:text-4xl mb-12">
           &lt; Quality With Agility /&gt;
         </h3>
 
-        <p className="text-lg md:text-xl leading-relaxed">
-          A QWA carrega em sua essência o equilíbrio entre qualidade e agilidade — dois pilares que sustentam tudo o que construímos.
-          Nossa atuação é guiada pela criação de ecossistemas digitais robustos, pensados não apenas para atender demandas atuais,
-          mas para sustentar evolução contínua e vantagem competitiva.
-          Acreditamos no desenvolvimento humano como força central. Por isso, mais do que entregar soluções, estruturamos fundamentos
-          que impulsionam o crescimento de clientes e colaboradores de forma consistente e duradoura.
+        <div className="" style={{ display: 'flex', flexDirection: 'row', gap: '18px' }}>
+
+          <Image
+            src="/CAPA/LogoQWABranca.png"
+            alt="imagem"
+            width={250}
+            height={250}
+            className="object-contain"
+            style={{ justifySelf: 'start', alignSelf: 'baseline' }}
+            priority
+          />
+
+          <p className="text-lg md:text-xl leading-relaxed text-justify">
+            A QWA carrega em sua essência o equilíbrio entre qualidade e agilidade — dois pilares que sustentam tudo o que construímos.
+            Nossa atuação é guiada pela criação de ecossistemas digitais robustos, pensados não apenas para atender demandas atuais,
+            mas para sustentar evolução contínua e vantagem competitiva.
+            Acreditamos no desenvolvimento humano como força central. Por isso, mais do que entregar soluções, estruturamos fundamentos
+            que impulsionam o crescimento de clientes e colaboradores de forma consistente e duradoura.
+          </p>
+        </div>
+
+        <p className="text-lg md:text-3xl text-qwa-dark font-black leading-relaxed text-justify md:mt-12 uppercase"
+          style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'baseline' }}
+        >
+          <LuTornado className="w-6 h-6" />
+          Simplifique
         </p>
+
+        <p className="text-lg md:text-3xl text-qwa-dark font-black leading-relaxed text-justify md:mt-12 uppercase"
+          style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'baseline' }}
+        >
+          <LuTornado className="w-6 h-6" />
+          Tornado
+        </p>
+
+        <p className="text-lg md:text-3xl text-qwa-dark font-black leading-relaxed text-justify md:mt-12 uppercase"
+          style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'baseline' }}
+        >
+          <LuTornado className="w-6 h-6" />
+          Simplex
+        </p>
+        
+        <p className="text-lg md:text-3xl text-qwa-dark font-black leading-relaxed text-justify md:mt-12 uppercase"
+          style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'baseline' }}
+        >
+          <LuTornado className="w-6 h-6" />
+          Mentorado
+        </p>
+
       </div>
+
 
     </section>
   );
