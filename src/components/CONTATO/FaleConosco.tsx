@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaArrowRight, FaPhone } from 'react-icons/fa';
+import { MdOutlineMail } from 'react-icons/md';
 
 const faleconosco = () => {
   return (
@@ -9,7 +11,7 @@ const faleconosco = () => {
 
         <div className="bg-white rounded-[40px] shadow-xl overflow-hidden border border-gray-100">
           <div className="flex flex-col lg:flex-row">
-            <div className="lg:w-1/2 p-12 lg:p-20 bg-gradient-to-br from-qwa-lilac to-qwa-dark text-white">
+            <div className="lg:w-1/2 p-12 lg:p-20 bg-gradient-to-br from-qwa-lilac to-qwa-primary text-white">
               <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-8">
                 Vamos transformar seu projeto em realidade?
               </h2>
@@ -20,9 +22,7 @@ const faleconosco = () => {
               <div className="space-y-8">
                 <div className="flex items-center gap-6 group">
                   <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-qwa-lilac transition-all duration-300">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
+                    <MdOutlineMail className="w-6 h-6"/>
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest mb-1">E-mail</p>
@@ -32,9 +32,7 @@ const faleconosco = () => {
 
                 <div className="flex items-center gap-6 group">
                   <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-white group-hover:bg-white group-hover:text-qwa-lilac transition-all duration-300">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
+                    <FaPhone  className="w-5 h-5"/>
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-white/60 uppercase tracking-widest mb-1">Telefone</p>
@@ -80,12 +78,10 @@ const faleconosco = () => {
                     className="w-full px-6 py-4 rounded-2xl border border-gray-100 focus:border-qwa-lilac focus:ring-0 transition-all outline-none bg-white font-medium resize-none"
                   ></textarea>
                 </div>
-                <button className="w-full bg-qwa-dark text-white px-10 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] hover:bg-qwa-dark transition-all shadow-xl flex items-center justify-center gap-4 group">
+                <button className="w-full bg-qwa-primary text-white px-10 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] hover:bg-qwa-dark transition-all shadow-xl flex items-center justify-center gap-4 group">
                   Iniciar Transformação Digital
                   <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center group-hover:translate-x-1 transition-transform">
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M14 5l7 7-7 7M3 12h18" />
-                    </svg>
+                    <FaArrowRight />
                   </span>
                 </button>
               </form>
