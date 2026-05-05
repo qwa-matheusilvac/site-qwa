@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { LuHandHeart, LuTornado } from 'react-icons/lu';
 import { MdOutlineRocketLaunch } from 'react-icons/md';
 import { PiChatTeardropText, PiTarget } from 'react-icons/pi';
-import { TbHandFingerRight } from 'react-icons/tb';
 
 const mvvData = [
   {
@@ -186,34 +185,6 @@ const SobreNos = () => {
             que impulsionam o crescimento de clientes e colaboradores de forma consistente e duradoura.
           </p>
         </div>
-
-        <p className="text-lg md:text-3xl text-qwa-dark font-black leading-relaxed text-justify md:mt-12 uppercase"
-          style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'baseline' }}
-        >
-          <LuTornado className="w-6 h-6" />
-          Simplifique
-        </p>
-
-        <p className="text-lg md:text-3xl text-qwa-dark font-black leading-relaxed text-justify md:mt-12 uppercase"
-          style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'baseline' }}
-        >
-          <LuTornado className="w-6 h-6" />
-          Tornado
-        </p>
-
-        <p className="text-lg md:text-3xl text-qwa-dark font-black leading-relaxed text-justify md:mt-12 uppercase"
-          style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'baseline' }}
-        >
-          <LuTornado className="w-6 h-6" />
-          Simplex
-        </p>
-        
-        <p className="text-lg md:text-3xl text-qwa-dark font-black leading-relaxed text-justify md:mt-12 uppercase"
-          style={{ display: 'flex', flexDirection: 'row', gap: '8px', alignItems: 'baseline' }}
-        >
-          <LuTornado className="w-6 h-6" />
-          Mentorado
-        </p>
 
       </div>
 
