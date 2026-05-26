@@ -10,17 +10,17 @@ import { PiChatTeardropText, PiTarget } from 'react-icons/pi';
 const mvvData = [
   {
     title: "Missão",
-    description: "Entregar soluções tecnológicas de alta performance que impulsionam resultados reais para nossos clientes.",
+    description: "Entregar soluções tecnológicas de alta performance que impulsionam resultados reais para nossos clientes, criando software de qualidade, superando expectativas e agregando o máximo de valor em curto tempo. ",
     icon: MdOutlineRocketLaunch
   },
   {
     title: "Visão",
-    description: "Ser referência em inovação e qualidade no desenvolvimento de soluções digitais na América Latina.",
+    description: "Ser referência em inovação e qualidade no desenvolvimento de soluções digitais, proporcionando satisfação aos clientes através do desenvolvimento de ferramentas de fácil utilização com alta produtividade, mantendo-os sempre um passo a frente em seu mercado de atuação.",
     icon: PiTarget
   },
   {
     title: "Valores",
-    description: "Excelência, transparência, agilidade, foco no cliente e inovação contínua em tudo o que fazemos.",
+    description: "Nossos valores são pautados em Qualidade, Agilidade, Inovação, Simplicidade, Parceria, Satisfação do Cliente e Trabalho em Equipe, mantendo sempre o foco na inovação contínua em tudo o que fazemos.",
     icon: LuHandHeart
   }
 ];
@@ -81,7 +81,7 @@ const SobreNos = () => {
           Pilares da QWA
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
           {mvvData.map((item, index) => {
             const Icon = item.icon as React.ElementType;
             return (
@@ -95,7 +95,7 @@ const SobreNos = () => {
                     {item.title}
                   </h4>
                 </div>
-                <p className="text-qwa-light leading-relaxed">
+                <p className="text-xl text-qwa-light leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -160,24 +160,13 @@ const SobreNos = () => {
         </div>
       </div>
 
-      <div className="relative container mx-auto px-6 md:px-10 mt-44 pb-10 text-qwa-dark">
-        <h3 className="text-3xl font-black md:text-4xl mb-12">
+      <div className="relative container mx-auto px-6 md:px-10 mt-24 pb-10 text-qwa-dark">
+        <h3 className="text-3xl font-black md:text-4xl mb-22">
           &lt; Quality With Agility /&gt;
         </h3>
 
         <div className="" style={{ display: 'flex', flexDirection: 'row', gap: '18px' }}>
-
-          <Image
-            src="/CAPA/LogoQWABranca.png"
-            alt="imagem"
-            width={250}
-            height={250}
-            className="object-contain"
-            style={{ justifySelf: 'start', alignSelf: 'baseline' }}
-            priority
-          />
-
-          <p className="text-lg md:text-xl leading-relaxed text-justify">
+          <p className="text-2lg md:text-2xl leading-relaxed text-justify">
             A QWA carrega em sua essência o equilíbrio entre qualidade e agilidade — dois pilares que sustentam tudo o que construímos.
             Nossa atuação é guiada pela criação de ecossistemas digitais robustos, pensados não apenas para atender demandas atuais,
             mas para sustentar evolução contínua e vantagem competitiva.
@@ -185,8 +174,8 @@ const SobreNos = () => {
             que impulsionam o crescimento de clientes e colaboradores de forma consistente e duradoura.
           </p>
         </div>
-
       </div>
+
 
 
     </section>

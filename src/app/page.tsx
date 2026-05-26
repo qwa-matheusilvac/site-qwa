@@ -34,23 +34,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mt-10 max-w-5xl mx-auto pt-2">
-            <div className="flex flex-col items-center px-10 group">
-              <h4 className="text-lg font-black text-qwa-dark group-hover:text-qwa-primary transition-colors uppercase tracking-tight mb-2">Missão</h4>
-              <p className="text-gray-600 text-sm font-medium leading-relaxed text-center">Transformar ideias em soluções digitais de alto impacto, priorizando a qualidade.</p>
-            </div>
-
-            <div className="flex flex-col items-center px-10 border-x border-gray-100 group">
-              <h4 className="text-lg font-black text-qwa-dark group-hover:text-qwa-primary transition-colors uppercase tracking-tight mb-2">Visão</h4>
-              <p className="text-gray-600 text-sm font-medium leading-relaxed text-center">Ser referência global em engenharia de software, reconhecida pela excelência.</p>
-            </div>
-
-            <div className="flex flex-col items-center px-10 group">
-              <h4 className="text-lg font-black text-qwa-dark group-hover:text-qwa-primary transition-colors uppercase tracking-tight mb-2">Valores</h4>
-              <p className="text-gray-600 text-sm font-medium leading-relaxed text-center">Qualidade intransigente, transparência total e inovação constante.</p>
-            </div>
-          </div>
         </div>
       </section>
 
