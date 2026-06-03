@@ -20,7 +20,7 @@ const Rodape = () => {
               <div>
                 <h5 className="font-black uppercase text-lg tracking-widest mb-8">a QWA</h5>
                 <ul className="text-sm space-y-2 font-medium">
-                  <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Início</a></li>
+                  <li><a href="..#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Início</a></li>
                   <li><a href="/sobrenos#cultura-qwa" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Cultura QWA</a></li>
                   <li><a href="/sobrenos#nossa-historia" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Nossa História</a></li>
                 </ul>
@@ -29,18 +29,18 @@ const Rodape = () => {
               <div>
                 <h5 className="font-black uppercase text-lg tracking-widest mb-8">nosso ramo</h5>
                 <ul className="text-sm space-y-2 font-medium">
-                  <li><a href="/home#atuacao" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Seguros</a></li>
-                  <li><a href="#atuacao" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Financeiro</a></li>
-                  <li><a href="#atuacao" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Gestão de Vendas</a></li>
+                  <li><a href="..#atuacao" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Seguros</a></li>
+                  <li><a href="..#atuacao" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Financeiro</a></li>
+                  <li><a href="..#atuacao" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Gestão de Vendas</a></li>
                 </ul>
               </div>
 
               <div>
                 <h5 className="font-black uppercase text-lg tracking-widest mb-8">soluções</h5>
                 <ul className="text-sm space-y-2 font-medium">
-                  <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Nossos Produtos</a></li>
-                  <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Mentoria & Educação</a></li>
-                  <li><a href="#" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Software On-Demand</a></li>
+                  <li><a href="..#solucoes" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Nossos Produtos</a></li>
+                  <li><a href="/mentorado" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Mentoria & Educação</a></li>
+                  <li><a href="/contato" className="hover:text-qwa-cyan opacity-80 hover:opacity-100 transition-all">Software On-Demand</a></li>
                 </ul>
               </div>
 
