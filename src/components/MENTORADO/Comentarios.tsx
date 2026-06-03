@@ -1,106 +1,230 @@
 "use client";
 
-import React from 'react';
+import React from "react";
+import { FaQuoteRight } from "react-icons/fa";
 
 const Comentarios = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const testimonials = [
-    { 
-      name: "Alisson Honório", 
-      role: "Estagio 2024",
-      text: "Grande oportunidade de aprendizado praticando e interagindo com projetos reais! A QWA realmente entrega valor." 
+    {
+      name: "Alisson Honório",
+      role: "Estágio 2024",
+      rating: 5,
+      text: "Grande oportunidade de aprendizado praticando e interagindo com projetos reais! A QWA realmente entrega valor.",
     },
-    { 
-      name: "Matheus Correia", 
-      role: "Estagio 2025",
-      text: "A agilidade e qualidade técnica da equipe são impressionantes. Superaram nossas expectativas em cada entrega." 
+    {
+      name: "Matheus Correia",
+      role: "Estágio 2025",
+      rating: 5,
+      text: "A agilidade e qualidade técnica da equipe são impressionantes. Superaram nossas expectativas em cada entrega.",
     },
-    { 
-      name: "Gabriel Ferreira", 
-      role: "Estagio 2025",
-      text: "Transformaram nossos desafios complexos em soluções simples. O suporte e a consultoria são de primeiro nível." 
+    {
+      name: "Gabriel Corrêa",
+      role: "Estágio 2025",
+      rating: 5,
+      text: "Transformaram nossos desafios complexos em soluções simples. O suporte e a consultoria são de primeiro nível.",
     },
-    { 
-      name: "Ana Luiza de Oliveira", 
-      role: "Estagio 2026",
-      text: "Grata por cada oportunidade de aprendizado, o mentorado vem sendo um exemplo de crescimento diário! 💙" 
-    }
+    {
+      name: "Ana Luiza de Oliveira",
+      role: "Estágio 2026",
+      rating: 5,
+      text: "Grata por cada oportunidade de aprendizado, o mentorado vem sendo um exemplo de crescimento diário! 💙",
+    },
   ];
 
-  const next = () => setActiveIndex((prev) => (prev + 2) % testimonials.length);
-  const prev = () => setActiveIndex((prev) => (prev - 2 + testimonials.length) % testimonials.length);
+  const step = isMobile ? 1 : 2;
+
+  const next = () =>
+    setActiveIndex((prev) => (prev + step) % testimonials.length);
+
+  const prev = () =>
+    setActiveIndex(
+      (prev) => (prev - step + testimonials.length) % testimonials.length
+    );
 
   return (
-    <section className="py-24 bg-gray-50/30">
-      <div className="container mx-auto px-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
-          {/* Right Content - Moved to the right of the carousel */}
-          <div className="lg:w-1/3 order-2 lg:order-2">
-            <h2 className="text-4xl font-black text-qwa-dark tracking-tighter leading-[0.9] mb-6">
-              pessoas que <br />
-              participaram <br />
-              do projeto
+    <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-qwa-primary/5 blur-[140px] rounded-full" />
+
+      <div className="container mx-auto px-5 lg:px-8 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-20 items-center">
+          {/* Texto */}
+          <div className="w-full lg:w-1/3 text-center lg:text-left">
+            <span className="uppercase tracking-[0.3em] text-qwa-primary text-xs font-bold">
+              Depoimentos
+            </span>
+
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-qwa-dark leading-none mt-4 mb-6">
+              Quem fez parte
+              <br />
+              dessa jornada.
             </h2>
-            <p className="text-gray-500 font-medium text-sm leading-relaxed mb-8">
-              O sucesso de cada projeto é construído através da colaboração e dedicação de todos os envolvidos. Confira o que dizem sobre nossa jornada juntos.
+
+            <p className="text-gray-500 leading-relaxed mb-8">
+              O sucesso de cada projeto é construído através da colaboração e
+              dedicação de todos os envolvidos. Confira o que dizem sobre nossa
+              jornada juntos.
             </p>
-            <button className="bg-qwa-dark text-white px-8 py-3 rounded-full font-black hover:scale-105 transition-transform shadow-xl uppercase text-[10px] tracking-widest">
+
+            <button className="bg-qwa-dark text-white px-8 py-4 rounded-full font-bold hover:scale-105 transition-all shadow-xl">
               Saber Mais
             </button>
           </div>
 
-          <div className="lg:w-2/3 relative py-8 order-1 lg:order-1 overflow-hidden">
-            <div className="overflow-visible px-8">
-              <div 
-                className="flex transition-transform duration-700 ease-in-out gap-6" 
-                style={{ transform: `translateX(-${activeIndex * 40}%)` }}
+          {/* Carrossel */}
+          <div className="w-full lg:w-2/3 overflow-hidden">
+            <div className="overflow-hidden p-10">
+              <div
+                className="flex transition-transform duration-700 ease-in-out"
+                style={{
+                  transform: `translateX(-${
+                    isMobile
+                      ? activeIndex * 100
+                      : activeIndex * 50
+                  }%)`,
+                }}
               >
-                {testimonials.map((item, i) => (
-                  <div 
-                    key={i} 
-                    className={`w-[calc(40%-20px)] flex-shrink-0 bg-white p-8 rounded-[32px] transition-all duration-500 flex flex-col justify-between min-h-[350px] relative z-10
-                      ${i === (activeIndex + 2) % testimonials.length || i === (activeIndex + 1) % testimonials.length
-                        ? 'shadow-[20px_0_60px_rgba(0,0,0,0.15)] scale-[0.98]' 
-                        : 'shadow-[0_15px_45px_rgba(0,0,0,0.06)]'}
-                    `}
-                  >
-                    <div className="text-qwa-primary/20 mb-4">
-                      <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C20.1216 16 21.017 16.8954 21.017 18V21C21.017 22.1046 20.1216 23 19.017 23H16.017C14.9124 23 14.017 22.1046 14.017 21ZM14.017 21H10.017V17.031L12.017 13C12.017 13 12.665 11.003 14.017 11.003V13.003C14.017 13.003 13.017 13.003 13.017 14.003H14.017C15.1216 14.003 16.017 14.8984 16.017 16.003V17.003C16.017 18.1076 15.1216 19.003 14.017 19.003V21ZM3.017 21L3.017 18C3.017 16.8954 3.91243 16 5.017 16H8.017C9.12157 16 10.017 16.8954 10.017 18V21C10.017 22.1046 9.12157 23 8.017 23H5.017C3.91243 23 3.017 22.1046 3.017 21ZM3.017 21H0.017V17.031L2.017 13C2.017 13 2.665 11.003 4.017 11.003V13.003C4.017 13.003 3.017 13.003 3.017 14.003H4.017C5.12157 14.003 6.017 14.8984 6.017 16.003V17.003C6.017 18.1076 5.12157 19.003 4.017 19.003V21Z" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-600 text-base font-medium leading-relaxed italic mb-6">
-                      "{item.text}"
-                    </p>
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-qwa-primary/10 flex items-center justify-center text-qwa-primary font-black text-[10px]">
-                        {item.name.charAt(0)}
+                {testimonials.map((item, i) => {
+                  const isActive = isMobile
+                    ? i === activeIndex
+                    : i === activeIndex ||
+                      i === (activeIndex + 1) % testimonials.length;
+
+                  return (
+                    <div
+                      key={i}
+                      className={`
+                        ${
+                          isMobile
+                            ? "w-full"
+                            : "w-1/2 px-3"
+                        }
+                        flex-shrink-0
+                      `}
+                    >
+                      <div
+                        className={`
+                          rounded-[32px]
+                          p-15
+                          min-h-[380px]
+                          border
+                          transition-all
+                          duration-500
+                          backdrop-blur-xl
+                          flex flex-col
+                          ${
+                            isActive
+                              ? "bg-white/90 scale-100 border-white p-10"
+                              : "bg-white/60 scale-95 opacity-70 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border-gray-100 p-10"
+                          }
+                        `}
+                      >
+                        <div className="flex flex-col h-full">
+                          {/* Avaliação */}
+                          <div className="flex items-center justify-between">
+                            <div className="flex gap-1">
+                              {[...Array(5)].map((_, starIndex) => (
+                                <span
+                                  key={starIndex}
+                                  className={`text-sm ${
+                                    starIndex < item.rating
+                                      ? "opacity-100"
+                                      : "opacity-20"
+                                  }`}
+                                >
+                                  ⭐
+                                </span>
+                              ))}
+                            </div>
+
+                            <FaQuoteRight className="text-qwa-primary/20 text-lg" />
+                          </div>
+
+                          {/* Comentário */}
+                          <div className="flex-1 flex items-center py-6">
+                            <p className="text-gray-600 text-[15px] leading-7">
+                              {item.text}
+                            </p>
+                          </div>
+
+                          {/* Autor */}
+                          <div className="flex items-center gap-4">
+                            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-qwa-primary via-indigo-500 to-violet-500 flex items-center justify-center text-white font-bold shadow-md">
+                              {item.name.charAt(0)}
+                            </div>
+
+                            <div>
+                              <h5 className="font-semibold text-sm text-qwa-dark">
+                                {item.name}
+                              </h5>
+
+                              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-qwa-primary/10 text-qwa-primary text-[11px] font-medium mt-1">
+                                {item.role}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <h5 className="font-black text-qwa-dark uppercase text-[9px] tracking-widest">{item.name}</h5>
-                        <p className="text-qwa-primary font-bold text-[7px] uppercase tracking-wider mt-0.5">{item.role}</p>
-                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
-            {/* Navigation Buttons */}
-            <div className="flex gap-3 mt-6">
-              <button 
-                onClick={prev}
-                className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-qwa-primary hover:text-white hover:border-qwa-primary transition-all shadow-sm"
-              >
-                <span className="text-xs">←</span>
-              </button>
-              <button 
-                onClick={next}
-                className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center hover:bg-qwa-primary hover:text-white hover:border-qwa-primary transition-all shadow-sm"
-              >
-                <span className="text-xs">→</span>
-              </button>
+            {/* Navegação */}
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mt-10 mb-10">
+              <div className="flex gap-3">
+                <button
+                  onClick={prev}
+                  className="w-10 h-10 rounded-full bg-white shadow-lg hover:scale-110 transition-all flex items-center justify-center"
+                >
+                  ←
+                </button>
+
+                <button
+                  onClick={next}
+                  className="w-10 h-10 rounded-full bg-white shadow-lg hover:scale-110 transition-all flex items-center justify-center"
+                >
+                  →
+                </button>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <span className="font-bold text-sm">
+                  {activeIndex + 1}
+                </span>
+
+                <div className="w-24 h-[3px] bg-gray-200 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-qwa-primary transition-all duration-500"
+                    style={{
+                      width: `${
+                        ((activeIndex + 1) /
+                          testimonials.length) *
+                        100
+                      }%`,
+                    }}
+                  />
+                </div>
+
+                <span className="text-gray-400 text-sm">
+                  {testimonials.length}
+                </span>
+              </div>
             </div>
           </div>
         </div>
