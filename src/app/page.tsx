@@ -6,17 +6,17 @@ import AreasNegocio from "@/components/HOME/AreasNegocio";
 import ComoTrabalhamos from "@/components/MENTORADO/ComoTrabalhamos";
 import Mentoria from "@/components/MENTORADO/Mentoria";
 import Comentarios from "@/components/MENTORADO/Comentarios";
-import Rodape from "@/components/CONTATO/Rodape";
+import Rodape from "@/components/Rodape";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white overflow-x-hidden">
+    <main className="min-h-screen bg-white overflow-x-hidden" id='home'>
       <Navbar />
       <Destaque />
       <Estatisticas />
 
-      <section id="sobre-nos" className="py-16 bg-white text-qwa-dark overflow-hidden">
+      <section className="py-16 bg-white text-qwa-dark overflow-hidden">
         <div className="container mx-auto px-10">
           <div className="flex flex-col md:flex-row gap-8 items-start text-left max-w-5xl mx-auto">
             <div className="md:w-[45%]">

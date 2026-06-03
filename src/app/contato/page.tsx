@@ -1,5 +1,5 @@
 import Navbar from "@/components/CONTATO/Navbar";
-import Rodape from "@/components/CONTATO/Rodape";
+import Rodape from "@/components/Rodape";
 import FaleConosco from "../../components/CONTATO/FaleConosco";
 
 export default function ContatoPage() {

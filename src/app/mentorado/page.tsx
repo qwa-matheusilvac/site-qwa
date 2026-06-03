@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Rodape from "@/components/CONTATO/Rodape";
+import Rodape from "@/components/Rodape";
 import DestaqueMentorado from "@/components/MENTORADO/DestaqueMentorado";
 import SobreMentorado from "@/components/MENTORADO/SobreMentorado";
 import ComoTrabalhamos from "@/components/MENTORADO/ComoTrabalhamos";

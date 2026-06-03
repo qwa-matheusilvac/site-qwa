@@ -76,7 +76,7 @@ const SobreNos = () => {
         </div>
       </div>
 
-      <div className="relative container mx-auto px-6 md:px-10 mt-50">
+      <div id='cultura-qwa' className="relative container mx-auto px-6 md:px-10 mt-50">
         <h3 className="text-3xl md:text-4xl font-black uppercase text-qwa-light mb-30">
           Pilares da QWA
         </h3>
@@ -104,7 +104,7 @@ const SobreNos = () => {
         </div>
       </div>
 
-      <div className="relative container mx-auto px-6 md:px-10 mt-44 pt-20 pb-40 rounded-[20px]">
+      <div id='nossa-historia' className="relative container mx-auto px-6 md:px-10 mt-44 pt-20 pb-40 rounded-[20px]">
         <h3 className="text-3xl md:text-4xl font-black text-qwa-light uppercase mb-30 text-center">
           Nossa trajetória
         </h3>
