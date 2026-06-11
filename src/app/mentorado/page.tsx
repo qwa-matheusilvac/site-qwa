@@ -2,7 +2,9 @@ import Navbar from "@/components/Navbar";
 import Rodape from "@/components/Rodape";
 import DestaqueMentorado from "@/components/MENTORADO/DestaqueMentorado";
 import SobreMentorado from "@/components/MENTORADO/SobreMentorado";
-import ComoTrabalhamos from "@/components/MENTORADO/ComoTrabalhamos";
+import FeaturesMentorado from "@/components/MENTORADO/FeaturesMentorado";
+import StatsMentorado from "@/components/MENTORADO/StatsMentorado";
+import TrabalheConosco from "@/components/MENTORADO/TrabalheConosco";
 
 export default function MentoradoPage() {
   return (
@@ -10,7 +12,9 @@ export default function MentoradoPage() {
       <Navbar />
       <DestaqueMentorado />
       <SobreMentorado />
-      <ComoTrabalhamos />
+      <FeaturesMentorado />
+      <StatsMentorado />
+      <TrabalheConosco />
       <Rodape />
     </main>
   );

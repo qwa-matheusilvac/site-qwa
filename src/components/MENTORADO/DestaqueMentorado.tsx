@@ -1,55 +1,34 @@
 import Image from "next/image";
-import { FaInfoCircle, FaProjectDiagram, FaUserPlus } from "react-icons/fa";
 
 const DestaqueMentorado = () => {
-  const menuItems = [
-    { label: "O que é", icon: <FaInfoCircle className="text-2xl" /> },
-    { label: "Fluxo", icon: <FaProjectDiagram className="text-2xl" /> },
-    { label: "Como participar", icon: <FaUserPlus className="text-2xl" /> }
-  ];
-
   return (
-    <section id="home" className="relative bg-gradient-to-br from-qwa-lilac to-[#4d3ef7] text-white pt-32 pb-12 z-10 overflow-hidden rounded-b-[80px] shadow-2xl">
-      <div className="container mx-auto px-10 mt-16 flex flex-col md:flex-row items-center relative">
-        <div className="md:w-1/2 z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-[70px] font-black leading-[0.95] tracking-tighter mb-8 uppercase">
-            PROGRAMA DE<br />
-            <span className="text-qwa-cyan">MENTORADO</span>
-          </h1>
-          <p className="text-lg md:text-xl font-medium mb-12 opacity-80 max-w-lg leading-relaxed">
-            Desenvolvemos talentos e impulsionamos carreiras através de um acompanhamento próximo e prático.
-          </p>
-        </div>
-        
-        <div className="md:w-1/2 relative mt-16 md:mt-0 flex justify-center">
-          <div className="relative w-full max-w-2xl">
-            <div className="relative z-10 overflow-hidden">
-              <Image 
-                src="/CAPA/LogoQWABranca.png" 
-                alt="QWA Solutions" 
-                width={800} 
-                height={800} 
-                className="w-full h-auto object-contain opacity-20"
-              />
-            </div>
-          </div>
-        </div>
+    <section id="home" className="relative h-[90vh] flex flex-col justify-center text-white z-10 overflow-hidden rounded-b-[80px] shadow-2xl pb-16">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/MENTORADO/CapaMentorado.png" 
+          alt="Capa Mentorado" 
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Overlay to ensure text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* Items Bar at the bottom of Hero */}
-      <div className="mt-20 mb-[-20px] relative z-20">
-        <div className="container mx-auto px-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto bg-white/10 backdrop-blur-md py-8 rounded-[40px] border border-white/20">
-            {menuItems.map((item, i) => (
-              <div key={i} className="flex items-center justify-center gap-4 group cursor-pointer hover:scale-105 transition-transform">
-                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white group-hover:bg-qwa-cyan group-hover:text-qwa-dark transition-colors shadow-lg">
-                  {item.icon}
-                </div>
-                <span className="text-sm font-black uppercase tracking-widest">{item.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+      <div className="container mx-auto px-10 relative z-10 flex flex-col items-start text-left">
+        <h1 className="text-5xl md:text-7xl font-black mb-4">
+          Sua <span className="bg-gradient-to-r from-qwa-cyan to-qwa-primary bg-clip-text text-transparent">excelência</span><br />
+          COM UMA BASE SÓLIDA!
+        </h1>
+
+        <p className="text-lg md:text-xl font-black max-w-2xl leading-relaxed mb-10 relative z-20 text-white/90">
+          O fluxo de aprendizado exclusivo para o nosso time. Aprenda na prática os pilares que sustentam nossas soluções e <span className="text-qwa-cyan font-black">acelere sua evolução na empresa.</span>
+        </p>
+
+        <button className="bg-qwa-dark text-white px-12 py-5 rounded-2xl font-black uppercase text-sm tracking-widest shadow-2xl hover:scale-105 transition-all">
+          QUERO COMEÇAR AGORA
+        </button>
       </div>
     </section>
   );
