@@ -20,9 +20,9 @@ const Destaque = () => {
 
           <div className="flex flex-col justify-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-black leading-[0.95] tracking-tighter mb-6">
-              SIMPLIFIQUE<br />
-              SUAS <span className="text-qwa-cyan">IDEIAS</span>
-            </h1>
+                SIMPLIFIQUE<br />
+                SUAS <span className="text-[#22d3ee">IDEIAS</span>
+              </h1>
 
             <p className="text-sm sm:text-base md:text-lg font-medium opacity-80 max-w-md leading-relaxed">
               Tornamos ideias complexas em soluções digitais robustas e escaláveis para o seu negócio.
