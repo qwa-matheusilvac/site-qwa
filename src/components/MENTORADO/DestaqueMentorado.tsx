@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const DestaqueMentorado = () => {
   return (
-    <section id="home" className="relative h-[90vh] flex flex-col justify-center text-white z-10 overflow-hidden rounded-b-[80px] shadow-2xl pb-16">
+    <section id="home" className="relative pt-24 md:pt-50 pb-16 md:pb-18 flex flex-col justify-center text-white z-10 overflow-hidden rounded-b-[40px] md:rounded-b-[60px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -16,7 +16,7 @@ const DestaqueMentorado = () => {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      <div className="container mx-auto px-10 relative z-10 flex flex-col items-start text-left">
+      <div className="container mx-auto px-6 md:px-10 relative z-10 flex flex-col items-start text-left">
         <h1 className="text-5xl md:text-7xl font-black mb-4">
           Sua <span className="bg-gradient-to-r from-qwa-cyan to-qwa-primary bg-clip-text text-transparent">excelência</span><br />
           COM UMA BASE SÓLIDA!

@@ -9,9 +9,9 @@ const SobreNos = () => {
       {/* 1. CAPA EXATA COMO HOME - MESMA COR E TAMANHO */}
       <section
         id="home"
-        className="relative bg-gradient-to-br from-qwa-lilac to-[#4d3ef7] text-white pt-32 pb-12 overflow-hidden rounded-b-[80px] shadow-2xl"
+        className="relative bg-gradient-to-br from-qwa-lilac to-[#4d3ef7] text-white pt-24 md:pt-50 pb-16 md:pb-18 overflow-hidden rounded-b-[40px] md:rounded-b-[60px]"
       >
-        <div className="container mx-auto px-10 mt-16">
+        <div className="container mx-auto px-6 md:px-10">
           <div className="flex flex-col items-center text-center">
             <h1 className="text-4xl md:text-6xl lg:text-[70px] font-black leading-[0.95] tracking-tighter mb-8">
               <span className="text-[#22d3ee]">Quality With</span> Agility
@@ -122,53 +122,54 @@ const SobreNos = () => {
             height={800} 
             className="w-full h-[600px] object-cover" 
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center">
+          {/* Overlay preto com 45% de opacidade */}
+          <div className="absolute inset-0 bg-black/45"></div>
+          <div className="absolute inset-0 flex items-center justify-center">
             <div className="container mx-auto px-10">
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
+              <h2 className="text-4xl md:text-6xl font-black text-white mb-12 text-center">
                 Nossos Valores
               </h2>
-              <p className="text-xl text-white opacity-90 max-w-2xl">
-                Eles fazem parte do nosso dia a dia e acreditamos tanto nesses valores que os tornamos visíveis, estampando-os em nossa parede como um lembrete constante de quem somos e de onde queremos chegar.
-                Na QWA, esses princípios não são apenas palavras: são pilares essenciais que sustentam nosso desenvolvimento, fortalecem nossas relações e guiam a forma como convivemos e crescemos juntos. É através deles que construímos um ambiente de trabalho saudável, colaborativo e verdadeiramente transformador.
-
-              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 text-center">
+                {[
+                  "EVOLUÇÃO", "COMPARTILHAR CONHECIMENTO", "PROATIVIDADE", 
+                  "AUTONOMIA", "RESPONSABILIDADE", "MATURIDADE", "EMPATIA", 
+                  "HUMILDADE", "PERSISTÊNCIA", "ALTRUÍSMO", "RESILIÊNCIA", 
+                  "CURIOSIDADE", "CRIATIVIDADE", "PROTAGONISMO", "SOLUÇÃO", 
+                  "SIMPLIFIQUE", "PROPÓSITO", "COMPROMETIDO"
+                ].map((valor, index) => (
+                  <div key={index} className="text-white font-bold text-lg md:text-xl">
+                    {valor}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. NOSSA CULTURA - LUGAR DE MEET EXPERT INSTRUCTOR */}
+      {/* 5. NOSSA CULTURA */}
       <section className="py-20 md:py-28 bg-white">
         <div className="container mx-auto px-6 md:px-10">
-          <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-black text-[#1e1b4b]">
-              Nossa <span className="text-[#8d5ae2]">Cultura</span>
-            </h2>
-            <button className="px-6 py-3 border-2 border-gray-200 text-[#1e1b4b] font-bold rounded-xl hover:border-[#8d5ae2] hover:text-[#8d5ae2] transition-all">
-              Saiba mais
-            </button>
-          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-[#1e1b4b] mb-12 text-center">
+            Nossa <span className="text-[#8d5ae2]">Cultura</span>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { 
                 img: "Foco em Pessoas e Interações.png", 
-                title: "Foco em Pessoas", 
-                description: "Acreditamos que o nosso maior ativo não são as linhas de código, mas as pessoas que as escrevem. Na QWA, você não é um número; você é parte de uma família que evolui junta."
+                title: "Foco em Pessoas"
               },
               { 
                 img: "Espírito de Equipe.png", 
-                title: "Espírito de Equipe", 
-                description: "Na QWA, acreditamos piamente que não existe 'Eu' no desenvolvimento de software; somos um time onde as vitórias e as derrotas são compartilhadas por todos"
+                title: "Espírito de Equipe"
               },
               { 
                 img: "Humildade Técnica e Mentoria.png", 
-                title: "Humildade Técnica", 
-                description: "Ouvir e aprender como ponto de partida. Na QWA, a humildade é considerada nosso maior aliado."
+                title: "Humildade Técnica"
               },
               { 
                 img: "Protagonismo e Evolução Contínua.png", 
-                title: "Evolução Contínua", 
-                description: "Beber direto da fonte para voar mais alto. Nossa área é ingrata com quem para no tempo, por isso a evolução está no nosso DNA"
+                title: "Evolução Contínua"
               },
             ].map((item, index) => (
               <div key={index} className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all border border-gray-100">
@@ -176,12 +177,11 @@ const SobreNos = () => {
                   src={`/SOBRE/${item.img}`} 
                   alt={item.title} 
                   width={300} 
-                  height={350} 
-                  className="w-full h-72 object-cover" 
+                  height={250} 
+                  className="w-full h-64 object-cover" 
                 />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#1e1b4b] mb-2">{item.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-bold text-[#1e1b4b]">{item.title}</h3>
                 </div>
               </div>
             ))}
@@ -189,7 +189,37 @@ const SobreNos = () => {
         </div>
       </section>
 
-      {/* 6. ONDE QUEREMOS CHEGAR - IMAGEM 5 */}
+      {/* 6. LINHA DO TEMPO */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container mx-auto px-6 md:px-10">
+          <h2 className="text-3xl md:text-5xl font-black text-[#1e1b4b] mb-12 text-center">
+            Linha do <span className="text-[#8d5ae2]">Tempo</span>
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            {/* Timeline items placeholder - você pode adicionar anos e eventos depois */}
+            <div className="space-y-12">
+              {[
+                { ano: "2011", evento: "Fundação da QWA" },
+                { ano: "2015", evento: "Lançamento do primeiro produto próprio" },
+                { ano: "2020", evento: "Expansão da equipe" },
+                { ano: "2024", evento: "Hoje e sempre evoluindo" }
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-6">
+                  <div className="w-24 flex-shrink-0">
+                    <span className="text-2xl font-black text-[#8d5ae2]">{item.ano}</span>
+                  </div>
+                  <div className="w-4 h-4 rounded-full bg-[#8d5ae2] flex-shrink-0"></div>
+                  <div className="flex-1 bg-gray-50 p-6 rounded-2xl">
+                    <p className="text-lg font-medium text-gray-800">{item.evento}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. ONDE QUEREMOS CHEGAR - IMAGEM 5 */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
