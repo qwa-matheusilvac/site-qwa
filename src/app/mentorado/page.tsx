@@ -1,20 +1,26 @@
 import Navbar from "@/components/Navbar";
 import Rodape from "@/components/Rodape";
 import DestaqueMentorado from "@/components/MENTORADO/DestaqueMentorado";
+import ValoresMentorado from "@/components/MENTORADO/ValoresMentorado";
+import SimplifiqueMentorado from "@/components/MENTORADO/SimplifiqueMentorado";
+import DeOndeSurgiu from "@/components/MENTORADO/DeOndeSurgiu";
+import CoinsSection from "@/components/MENTORADO/CoinsSection";
+import TaxExpertiseSection from "@/components/MENTORADO/TaxExpertiseSection";
 import SobreMentorado from "@/components/MENTORADO/SobreMentorado";
-import FeaturesMentorado from "@/components/MENTORADO/FeaturesMentorado";
-import StatsMentorado from "@/components/MENTORADO/StatsMentorado";
-import TrabalheConosco from "@/components/MENTORADO/TrabalheConosco";
+import FAQSection from "@/components/MENTORADO/FAQSection";
+import QuerFazerParteDoTime from "@/components/MENTORADO/QuerFazerParteDoTime";
 
 export default function MentoradoPage() {
   return (
     <main className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
       <DestaqueMentorado />
+      <ValoresMentorado />
+      <SimplifiqueMentorado />
+      <TaxExpertiseSection />
       <SobreMentorado />
-      <FeaturesMentorado />
-      <StatsMentorado />
-      <TrabalheConosco />
+      <FAQSection />
+      <QuerFazerParteDoTime />
       <Rodape />
     </main>
   );
