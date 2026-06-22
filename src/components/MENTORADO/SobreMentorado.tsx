@@ -37,8 +37,8 @@ const SobreMentorado = () => {
                 src={feature.image}
                 alt={feature.title}
                 width={400}
-                height={300}
-                className="w-full h-64 object-cover"
+                height={400}
+                className="w-full h-80 object-contain bg-white"
               />
               
               <div className="p-8">
